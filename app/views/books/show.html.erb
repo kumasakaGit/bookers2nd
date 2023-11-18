@@ -3,3 +3,10 @@
 
 <h2>本文</h2>
 <p><%= @book.body %></p>
+
+<p>画像</p>
+<% if @book.image.attached? %>
+    <%= image_tag @book.image, size: "200x200" %>
+<% else %>
+    <%= image_tag 'star-off', size: "200x200" %>
+<% end %>
